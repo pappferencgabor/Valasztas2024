@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    gap: 20px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/2000px-Flag_of_Hungary.svg.png");
+    background-position: fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    backdrop-filter: blur(15px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#content {
+    max-width: 90%; /* Maximum 90%-ra korlátozott szélesség */
+    max-height: 90%;
+    overflow-x: auto; /* Vízszintes görgetősáv bekapcsolása, ha a tartalom túl nagy */
+    overflow-y: auto;
+}
+
+input {
+    margin: 10px auto;
+    display: block;
+}
+
+#divTable {
+    width: 90%; /* Teljes szélesség */
+    height: 60vh;
+}
+
+#result {
+    border: 1px solid black;
+    border-collapse: collapse;
+    table-layout: fixed; /* Állandó szélességű oszlopok */
+    width: 90%; /* Teljes szélesség */
+}
+
+#result td, #result th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+#result th {
+    width: 123px;
+}
+#result td {
+    width: 123px;
+}
+
+#result thead tr{
+    background-color: lightcoral;
+}
+
+#result tbody tr:nth-child(even) {
+    background-color: lightcoral;
+}
+#result tbody tr:nth-child(odd) {
+    background-color: lightgreen;
+}
+
+.highest {
+    background-color: green;
+}
+.activeSort {
+    background-color: grey !important;
+}
+
+#result th:first-child,
+#result td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2; /* Biztosítja, hogy az első oszlop előtt legyen az összes többi tartalom */
+}
+
+#result tr:first-child th {
+    position: sticky;
+    top: 0;
+    z-index: 2; /* Biztosítja, hogy az első sor fölött legyen az összes többi tartalom */
+    background-color: white; 
+}
+
+#result th:first-child {
+    background-color: white; /* Az első oszlop háttérszíne legyen átlátszó */
+}
+
+#result thead tr th:first-child {
+    z-index: 3 !important;
+    background-color: white !important;
+    background-image: url("https://wallpapers.com/images/featured/blank-white-7sn5o1woonmklx1h.jpg") !important;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Választási eredmények 2024</title>
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+    <select id="megyeList" onchange="megyeListMonitor()">
+        <option value="00">ÖSSZES</option>
+        <option value="01">BUDAPEST</option>
+        <option value="02">BARANYA</option>
+        <option value="03">BÁCS-KISKUN</option>
+        <option value="04">BÉKÉS</option>
+        <option value="05">BORSOD-ABAÚJ-ZEMPLÉN</option>
+        <option value="06">CSONGRÁD-CSANÁD</option>
+        <option value="07">FEJÉR</option>
+        <option value="08">GYŐR-MOSON-SOPRON</option>
+        <option value="09">HAJDÚ-BIHAR</option>
+        <option value="10">HEVES</option>
+        <option value="11">JÁSZ-NAGYKUN-SZOLNOK</option>
+        <option value="12">KOMÁROM-ESZTERGOM</option>
+        <option value="13">NÓGRÁD</option>
+        <option value="14">PEST</option>
+        <option value="15">SOMOGY</option>
+        <option value="16">SZABOLCS-SZATMÁR-BEREG</option>
+        <option value="17">TOLNA</option>
+        <option value="18">VAS</option>
+        <option value="19">VESZPRÉM</option>
+        <option value="20">ZALA</option>
+    </select>
+
+    <h1 id="displayed">ÖSSZES</h1>
+
+    <div id="content">
+        <div id="divTable">
+            <table id="result">
+                <thead></thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="src/js/script.js"></script>
+</body>
+
+</html>
